@@ -1,0 +1,5 @@
+<linker>
+    <!-- preserve UnityEngine.SystemInfo -->
+    <assembly fullname="UnityEngine.CoreModule" preserve="all"/>   
+    <assembly fullname="Assembly-CSharp" preserve="all"/>   
+</linker>

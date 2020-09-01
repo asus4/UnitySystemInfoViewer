@@ -63,6 +63,7 @@ public sealed class SystemInfoViewEditor : Editor
         if (isPropChanged)
         {
             Undo.RecordObject(target, "Changed Property Show/Hide");
+            ((SystemInfoView)target).OnValidate();
         }
 
         serializedObject.ApplyModifiedProperties();

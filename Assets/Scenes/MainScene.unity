@@ -590,7 +590,7 @@ MonoBehaviour:
     memberType: 8
   - propName: get_operatingSystem
     displayName: Operating System
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_operatingSystemFamily
     displayName: Operating System Family
@@ -642,7 +642,7 @@ MonoBehaviour:
     memberType: 8
   - propName: get_supportsAudio
     displayName: Supports Audio
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_deviceType
     displayName: Device Type
@@ -1038,7 +1038,7 @@ MonoBehaviour:
     memberType: 16
   - propName: graphicsMultiThreaded
     displayName: Graphics Multi Threaded
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: renderingThreadingMode
     displayName: Rendering Threading Mode
@@ -1202,7 +1202,7 @@ MonoBehaviour:
     memberType: 16
   - propName: supportsAsyncGPUReadback
     displayName: Supports Async G P U Readback
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsRayTracing
     displayName: Supports Ray Tracing
@@ -1343,15 +1343,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- Processor Type: Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz
+  m_Text: '- Operating System: Mac OS X 10.15.6
 
-    - Device
-    Model: MacBookPro13,3
+    - Processor Type: Intel(R) Core(TM)
+    i7-6820HQ CPU @ 2.70GHz
+
+    - Device Model: MacBookPro13,3
+
+    - Supports Audio:
+    True
 
     - Graphics Device Name: AMD Radeon Pro 460
 
-    -
-    Supports Async G P U Readback: True
+    - Supports Sparse Textures:
+    False
+
+    - Supports Async G P U Readback: True
 
     - Device Model: MacBookPro13,3
 
@@ -1365,13 +1372,8 @@ MonoBehaviour:
 
     - Graphics Shader Level: 50
 
-    - Graphics
-    Multi Threaded: True
-
-    - Supports Async Compute: False
-
-    - Supports Async
-    G P U Readback: True
+    - Supports
+    Async Compute: False
 
 '
 --- !u!222 &1640851635

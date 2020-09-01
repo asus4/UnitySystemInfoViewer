@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Reflection;
 using UnityEngine;
@@ -47,9 +45,10 @@ public sealed class SystemInfoView : MonoBehaviour
                     var method = type.GetMethod(propName);
                     if (method.GetParameters().Length == 0)
                     {
-                        return method.Invoke(null, new object[]{});
+                        return method.Invoke(null, new object[] { });
                     }
-                    else {
+                    else
+                    {
                         return $"Method with Parameter is not suppoerted";
                     }
             }
@@ -70,22 +69,10 @@ public sealed class SystemInfoView : MonoBehaviour
         {
             label.text = BuildInfo();
         }
-        lastPropCount = props.Length;
-    }
-
-    private void Update()
-    {
-        if (label == null || lastPropCount == props.Length)
-        {
-            return;
-        }
-        label.text = BuildInfo();
-        lastPropCount = props.Length;
     }
 
     public string BuildInfo()
     {
-
         var sb = new System.Text.StringBuilder();
         foreach (var prop in props)
         {
@@ -100,14 +87,23 @@ public sealed class SystemInfoView : MonoBehaviour
 
     #region Editor Code
 #if UNITY_EDITOR
-    private void OnValidate()
+    public void OnValidate()
     {
         if (props == null
         || props.Length == 0
         || props.Any(p => !p.IsValid))
         {
             RebuildProps();
+            return;
         }
+
+        var count = props.Sum(p => p.isShow ? 1 : 0);
+        if (lastPropCount == count)
+        {
+            return;
+        }
+        label.text = BuildInfo();
+        lastPropCount = count;
     }
 
     private void RebuildProps()
