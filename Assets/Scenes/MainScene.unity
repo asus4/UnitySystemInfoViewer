@@ -651,7 +651,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8521d63eb33254054aa1c2ca1f3eaa75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 1640851634}
   props:
   - propName: get_batteryLevel
     displayName: Battery Level
@@ -663,7 +662,7 @@ MonoBehaviour:
     memberType: 8
   - propName: get_operatingSystem
     displayName: Operating System
-    isShow: 1
+    isShow: 0
     memberType: 8
   - propName: get_operatingSystemFamily
     displayName: Operating System Family
@@ -891,51 +890,51 @@ MonoBehaviour:
     memberType: 8
   - propName: get_maxComputeBufferInputsVertex
     displayName: Max Compute Buffer Inputs Vertex
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeBufferInputsFragment
     displayName: Max Compute Buffer Inputs Fragment
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeBufferInputsGeometry
     displayName: Max Compute Buffer Inputs Geometry
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeBufferInputsDomain
     displayName: Max Compute Buffer Inputs Domain
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeBufferInputsHull
     displayName: Max Compute Buffer Inputs Hull
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeBufferInputsCompute
     displayName: Max Compute Buffer Inputs Compute
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeWorkGroupSize
     displayName: Max Compute Work Group Size
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeWorkGroupSizeX
     displayName: Max Compute Work Group Size X
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeWorkGroupSizeY
     displayName: Max Compute Work Group Size Y
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_maxComputeWorkGroupSizeZ
     displayName: Max Compute Work Group Size Z
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_supportsAsyncCompute
     displayName: Supports Async Compute
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_supportsGraphicsFence
     displayName: Supports Graphics Fence
-    isShow: 0
+    isShow: 1
     memberType: 8
   - propName: get_supportsAsyncGPUReadback
     displayName: Supports Async G P U Readback
@@ -1333,6 +1332,21 @@ MonoBehaviour:
     displayName: Unsupported Identifier
     isShow: 0
     memberType: 4
+  onTextChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1640851634}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1444841071
 Transform:
   m_ObjectHideFlags: 0
@@ -1411,7 +1425,7 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 50
     m_Alignment: 3
     m_AlignByGeometry: 1
