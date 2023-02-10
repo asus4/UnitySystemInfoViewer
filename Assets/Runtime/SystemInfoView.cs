@@ -3,7 +3,6 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.UI;
 
 /// <summary>
 /// Show selected list of SystemInfo values
