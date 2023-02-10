@@ -25,6 +25,12 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "system-info-viewer": {
+      "version": "file:SystemInfoView",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.androidjni": {
       "version": "1.0.0",
       "depth": 0,
