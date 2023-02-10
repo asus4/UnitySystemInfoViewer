@@ -7,7 +7,7 @@ A utility to list arbitrary properties in the [SystemInfo](https://docs.unity3d.
 ## How to use
 
 1. Add the package to your project  
-`https://github.com/asus4/UnitySystemInfoViewer.git?path=Packages/SystemInfoViewer#1.0.0`
+`https://github.com/asus4/UnitySystemInfoViewer.git?path=Packages/SystemInfoViewer#v1.0.1`
 
 2. Put link.xml in the root of your project. and add the following code  
 
