@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(RectTransform))]
 [ExecuteInEditMode]
@@ -12,14 +10,9 @@ public class SafeArea : MonoBehaviour
         UpdateSafeArea(rt, Screen.safeArea);
     }
 
-    private void OnDisable()
-    {
-
-    }
-
     private void UpdateSafeArea(RectTransform rt, Rect safeArea)
     {
-        // Convert safe area rectangle from absolute pixels to normalised anchor coordinates
+        // Convert safe area rectangle from absolute pixels to normalized anchor coordinates
         Vector2 anchorMin = safeArea.position;
         Vector2 anchorMax = safeArea.position + safeArea.size;
         anchorMin.x /= Screen.width;

@@ -1,0 +1,16 @@
+{
+    "name": "SystemInfoViewerEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7c44c4b83e7164a11917f22cc1e98fd6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

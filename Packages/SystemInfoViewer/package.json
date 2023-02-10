@@ -1,0 +1,12 @@
+{
+  "name": "system-info-viewer",
+  "displayName": "System Info Viewer",
+  "author": "Koki Ibukuro",
+  "description": "Inspect system information",
+  "unity": "2022.3",
+  "unityRelease": "0f1",
+  "version": "1.0.0",
+  "type": "library",
+  "hideInEditor": false,
+  "dependencies": {}
+}

@@ -1,32 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using System.Linq;
 using UnityEditor;
 
 [CustomEditor(typeof(SystemInfoView))]
 public sealed class SystemInfoViewEditor : Editor
 {
-    private SerializedProperty label;
+    private SerializedProperty onTextChange;
     // private SerializedProperty props;
     private bool foldoutShowProps = true;
     private bool foldoutHideProps = true;
     private static string filter = "";
+    private SystemInfoView _target;
 
     private void OnEnable()
     {
-        label = serializedObject.FindProperty("label");
+        _target = (SystemInfoView)target;
+        onTextChange = serializedObject.FindProperty("onTextChange");
         // props = serializedObject.FindProperty("props");
     }
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
-        EditorGUILayout.PropertyField(label);
+        EditorGUILayout.PropertyField(onTextChange);
 
         filter = EditorGUILayout.TextField("Filter Property", filter);
 
-        var props = ((SystemInfoView)target).Properties.AsEnumerable();
+        var props = _target.Properties.AsEnumerable();
 
         if (!string.IsNullOrWhiteSpace(filter))
         {
@@ -63,7 +62,7 @@ public sealed class SystemInfoViewEditor : Editor
         if (isPropChanged)
         {
             Undo.RecordObject(target, "Changed Property Show/Hide");
-            ((SystemInfoView)target).OnValidate();
+            _target.OnValidate();
         }
 
         serializedObject.ApplyModifiedProperties();
