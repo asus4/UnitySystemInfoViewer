@@ -211,7 +211,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316808539}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -652,369 +652,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   props:
-  - propName: get_batteryLevel
-    displayName: Battery Level
-    isShow: 0
-    memberType: 8
-  - propName: get_batteryStatus
-    displayName: Battery Status
-    isShow: 0
-    memberType: 8
-  - propName: get_operatingSystem
-    displayName: Operating System
-    isShow: 0
-    memberType: 8
-  - propName: get_operatingSystemFamily
-    displayName: Operating System Family
-    isShow: 0
-    memberType: 8
-  - propName: get_processorType
-    displayName: Processor Type
+  - propName: supportsGPUFence
+    displayName: Supports GPU Fence
     isShow: 1
-    memberType: 8
-  - propName: get_processorFrequency
-    displayName: Processor Frequency
-    isShow: 0
-    memberType: 8
-  - propName: get_processorCount
-    displayName: Processor Count
-    isShow: 0
-    memberType: 8
-  - propName: get_systemMemorySize
-    displayName: System Memory Size
-    isShow: 0
-    memberType: 8
-  - propName: get_deviceUniqueIdentifier
-    displayName: Device Unique Identifier
-    isShow: 0
-    memberType: 8
-  - propName: get_deviceName
-    displayName: Device Name
-    isShow: 0
-    memberType: 8
-  - propName: get_deviceModel
-    displayName: Device Model
-    isShow: 1
-    memberType: 8
-  - propName: get_supportsAccelerometer
-    displayName: Supports Accelerometer
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsGyroscope
-    displayName: Supports Gyroscope
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsLocationService
-    displayName: Supports Location Service
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsVibration
-    displayName: Supports Vibration
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsAudio
-    displayName: Supports Audio
-    isShow: 1
-    memberType: 8
-  - propName: get_deviceType
-    displayName: Device Type
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsMemorySize
-    displayName: Graphics Memory Size
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsDeviceName
-    displayName: Graphics Device Name
-    isShow: 1
-    memberType: 8
-  - propName: get_graphicsDeviceVendor
-    displayName: Graphics Device Vendor
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsDeviceID
-    displayName: Graphics Device I D
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsDeviceVendorID
-    displayName: Graphics Device Vendor I D
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsDeviceType
-    displayName: Graphics Device Type
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsUVStartsAtTop
-    displayName: Graphics U V Starts At Top
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsDeviceVersion
-    displayName: Graphics Device Version
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsShaderLevel
-    displayName: Graphics Shader Level
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsMultiThreaded
-    displayName: Graphics Multi Threaded
-    isShow: 0
-    memberType: 8
-  - propName: get_renderingThreadingMode
-    displayName: Rendering Threading Mode
-    isShow: 0
-    memberType: 8
-  - propName: get_hasHiddenSurfaceRemovalOnGPU
-    displayName: Has Hidden Surface Removal On G P U
-    isShow: 0
-    memberType: 8
-  - propName: get_hasDynamicUniformArrayIndexingInFragmentShaders
-    displayName: Has Dynamic Uniform Array Indexing In Fragment Shaders
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsShadows
-    displayName: Supports Shadows
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsRawShadowDepthSampling
-    displayName: Supports Raw Shadow Depth Sampling
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsMotionVectors
-    displayName: Supports Motion Vectors
-    isShow: 0
-    memberType: 8
-  - propName: get_supports3DTextures
-    displayName: Supports3 D Textures
-    isShow: 0
-    memberType: 8
-  - propName: get_supports2DArrayTextures
-    displayName: Supports2 D Array Textures
-    isShow: 0
-    memberType: 8
-  - propName: get_supports3DRenderTextures
-    displayName: Supports3 D Render Textures
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsCubemapArrayTextures
-    displayName: Supports Cubemap Array Textures
-    isShow: 0
-    memberType: 8
-  - propName: get_copyTextureSupport
-    displayName: Copy Texture Support
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsComputeShaders
-    displayName: Supports Compute Shaders
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsGeometryShaders
-    displayName: Supports Geometry Shaders
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsTessellationShaders
-    displayName: Supports Tessellation Shaders
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsInstancing
-    displayName: Supports Instancing
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsHardwareQuadTopology
-    displayName: Supports Hardware Quad Topology
-    isShow: 0
-    memberType: 8
-  - propName: get_supports32bitsIndexBuffer
-    displayName: Supports32bits Index Buffer
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsSparseTextures
-    displayName: Supports Sparse Textures
-    isShow: 1
-    memberType: 8
-  - propName: get_supportedRenderTargetCount
-    displayName: Supported Render Target Count
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsSeparatedRenderTargetsBlend
-    displayName: Supports Separated Render Targets Blend
-    isShow: 0
-    memberType: 8
-  - propName: get_supportedRandomWriteTargetCount
-    displayName: Supported Random Write Target Count
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsMultisampledTextures
-    displayName: Supports Multisampled Textures
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsMultisampleAutoResolve
-    displayName: Supports Multisample Auto Resolve
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsTextureWrapMirrorOnce
-    displayName: Supports Texture Wrap Mirror Once
-    isShow: 0
-    memberType: 8
-  - propName: get_usesReversedZBuffer
-    displayName: Uses Reversed Z Buffer
-    isShow: 0
-    memberType: 8
-  - propName: SupportsRenderTextureFormat
-    displayName: Supports Render Texture Format
-    isShow: 0
-    memberType: 8
-  - propName: SupportsBlendingOnRenderTextureFormat
-    displayName: Supports Blending On Render Texture Format
-    isShow: 0
-    memberType: 8
-  - propName: SupportsTextureFormat
-    displayName: Supports Texture Format
-    isShow: 0
-    memberType: 8
-  - propName: SupportsVertexAttributeFormat
-    displayName: Supports Vertex Attribute Format
-    isShow: 0
-    memberType: 8
-  - propName: get_npotSupport
-    displayName: Npot Support
-    isShow: 0
-    memberType: 8
-  - propName: get_maxTextureSize
-    displayName: Max Texture Size
-    isShow: 0
-    memberType: 8
-  - propName: get_maxCubemapSize
-    displayName: Max Cubemap Size
-    isShow: 0
-    memberType: 8
-  - propName: get_maxComputeBufferInputsVertex
-    displayName: Max Compute Buffer Inputs Vertex
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeBufferInputsFragment
-    displayName: Max Compute Buffer Inputs Fragment
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeBufferInputsGeometry
-    displayName: Max Compute Buffer Inputs Geometry
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeBufferInputsDomain
-    displayName: Max Compute Buffer Inputs Domain
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeBufferInputsHull
-    displayName: Max Compute Buffer Inputs Hull
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeBufferInputsCompute
-    displayName: Max Compute Buffer Inputs Compute
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeWorkGroupSize
-    displayName: Max Compute Work Group Size
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeWorkGroupSizeX
-    displayName: Max Compute Work Group Size X
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeWorkGroupSizeY
-    displayName: Max Compute Work Group Size Y
-    isShow: 1
-    memberType: 8
-  - propName: get_maxComputeWorkGroupSizeZ
-    displayName: Max Compute Work Group Size Z
-    isShow: 1
-    memberType: 8
-  - propName: get_supportsAsyncCompute
-    displayName: Supports Async Compute
-    isShow: 1
-    memberType: 8
-  - propName: get_supportsGraphicsFence
-    displayName: Supports Graphics Fence
-    isShow: 1
-    memberType: 8
-  - propName: get_supportsAsyncGPUReadback
-    displayName: Supports Async G P U Readback
-    isShow: 1
-    memberType: 8
-  - propName: get_supportsRayTracing
-    displayName: Supports Ray Tracing
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsSetConstantBuffer
-    displayName: Supports Set Constant Buffer
-    isShow: 0
-    memberType: 8
-  - propName: get_minConstantBufferOffsetAlignment
-    displayName: Min Constant Buffer Offset Alignment
-    isShow: 0
-    memberType: 8
-  - propName: get_hasMipMaxLevel
-    displayName: Has Mip Max Level
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsMipStreaming
-    displayName: Supports Mip Streaming
-    isShow: 0
-    memberType: 8
-  - propName: get_usesLoadStoreActions
-    displayName: Uses Load Store Actions
-    isShow: 0
-    memberType: 8
-  - propName: IsFormatSupported
-    displayName: Is Format Supported
-    isShow: 0
-    memberType: 8
-  - propName: GetCompatibleFormat
-    displayName: Get Compatible Format
-    isShow: 0
-    memberType: 8
-  - propName: GetGraphicsFormat
-    displayName: Get Graphics Format
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsRenderTextures
-    displayName: Supports Render Textures
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsRenderToCubemap
-    displayName: Supports Render To Cubemap
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsImageEffects
-    displayName: Supports Image Effects
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsStencil
-    displayName: Supports Stencil
-    isShow: 0
-    memberType: 8
-  - propName: get_graphicsPixelFillrate
-    displayName: Graphics Pixel Fillrate
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsVertexPrograms
-    displayName: Supports Vertex Programs
-    isShow: 0
-    memberType: 8
-  - propName: get_supportsGPUFence
-    displayName: Supports G P U Fence
-    isShow: 0
-    memberType: 8
+    memberType: 16
   - propName: batteryLevel
     displayName: Battery Level
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: batteryStatus
     displayName: Battery Status
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: operatingSystem
     displayName: Operating System
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: operatingSystemFamily
     displayName: Operating System Family
@@ -1030,19 +682,19 @@ MonoBehaviour:
     memberType: 16
   - propName: processorCount
     displayName: Processor Count
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: systemMemorySize
     displayName: System Memory Size
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: deviceUniqueIdentifier
     displayName: Device Unique Identifier
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: deviceName
     displayName: Device Name
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: deviceModel
     displayName: Device Model
@@ -1050,19 +702,19 @@ MonoBehaviour:
     memberType: 16
   - propName: supportsAccelerometer
     displayName: Supports Accelerometer
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsGyroscope
     displayName: Supports Gyroscope
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsLocationService
     displayName: Supports Location Service
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsVibration
     displayName: Supports Vibration
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsAudio
     displayName: Supports Audio
@@ -1082,31 +734,31 @@ MonoBehaviour:
     memberType: 16
   - propName: graphicsDeviceVendor
     displayName: Graphics Device Vendor
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: graphicsDeviceID
-    displayName: Graphics Device I D
-    isShow: 0
+    displayName: Graphics Device ID
+    isShow: 1
     memberType: 16
   - propName: graphicsDeviceVendorID
-    displayName: Graphics Device Vendor I D
-    isShow: 0
+    displayName: Graphics Device Vendor ID
+    isShow: 1
     memberType: 16
   - propName: graphicsDeviceType
     displayName: Graphics Device Type
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: graphicsUVStartsAtTop
-    displayName: Graphics U V Starts At Top
+    displayName: Graphics UV Starts At Top
     isShow: 1
     memberType: 16
   - propName: graphicsDeviceVersion
     displayName: Graphics Device Version
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: graphicsShaderLevel
     displayName: Graphics Shader Level
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsMultiThreaded
     displayName: Graphics Multi Threaded
@@ -1117,7 +769,7 @@ MonoBehaviour:
     isShow: 0
     memberType: 16
   - propName: hasHiddenSurfaceRemovalOnGPU
-    displayName: Has Hidden Surface Removal On G P U
+    displayName: Has Hidden Surface Removal On GPU
     isShow: 0
     memberType: 16
   - propName: hasDynamicUniformArrayIndexingInFragmentShaders
@@ -1132,65 +784,85 @@ MonoBehaviour:
     displayName: Supports Raw Shadow Depth Sampling
     isShow: 0
     memberType: 16
+  - propName: supportsRenderTextures
+    displayName: Supports Render Textures
+    isShow: 0
+    memberType: 16
   - propName: supportsMotionVectors
     displayName: Supports Motion Vectors
     isShow: 0
     memberType: 16
+  - propName: supportsRenderToCubemap
+    displayName: Supports Render To Cubemap
+    isShow: 1
+    memberType: 16
+  - propName: supportsImageEffects
+    displayName: Supports Image Effects
+    isShow: 1
+    memberType: 16
   - propName: supports3DTextures
-    displayName: Supports3 D Textures
-    isShow: 0
+    displayName: Supports 3D Textures
+    isShow: 1
+    memberType: 16
+  - propName: supportsCompressed3DTextures
+    displayName: Supports Compressed 3D Textures
+    isShow: 1
     memberType: 16
   - propName: supports2DArrayTextures
-    displayName: Supports2 D Array Textures
-    isShow: 0
+    displayName: Supports 2D Array Textures
+    isShow: 1
     memberType: 16
   - propName: supports3DRenderTextures
-    displayName: Supports3 D Render Textures
-    isShow: 0
+    displayName: Supports 3D Render Textures
+    isShow: 1
     memberType: 16
   - propName: supportsCubemapArrayTextures
     displayName: Supports Cubemap Array Textures
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: copyTextureSupport
     displayName: Copy Texture Support
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsComputeShaders
     displayName: Supports Compute Shaders
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsGeometryShaders
     displayName: Supports Geometry Shaders
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsTessellationShaders
     displayName: Supports Tessellation Shaders
-    isShow: 0
+    isShow: 1
+    memberType: 16
+  - propName: supportsRenderTargetArrayIndexFromVertexShader
+    displayName: Supports Render Target Array Index From Vertex Shader
+    isShow: 1
     memberType: 16
   - propName: supportsInstancing
     displayName: Supports Instancing
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsHardwareQuadTopology
     displayName: Supports Hardware Quad Topology
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supports32bitsIndexBuffer
-    displayName: Supports32bits Index Buffer
-    isShow: 0
+    displayName: Supports 32bits Index Buffer
+    isShow: 1
     memberType: 16
   - propName: supportsSparseTextures
     displayName: Supports Sparse Textures
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportedRenderTargetCount
     displayName: Supported Render Target Count
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportsSeparatedRenderTargetsBlend
     displayName: Supports Separated Render Targets Blend
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: supportedRandomWriteTargetCount
     displayName: Supported Random Write Target Count
@@ -1198,6 +870,10 @@ MonoBehaviour:
     memberType: 16
   - propName: supportsMultisampledTextures
     displayName: Supports Multisampled Textures
+    isShow: 0
+    memberType: 16
+  - propName: supportsMultisampled2DArrayTextures
+    displayName: Supports Multisampled 2D Array Textures
     isShow: 0
     memberType: 16
   - propName: supportsMultisampleAutoResolve
@@ -1212,12 +888,24 @@ MonoBehaviour:
     displayName: Uses Reversed Z Buffer
     isShow: 0
     memberType: 16
+  - propName: supportsStencil
+    displayName: Supports Stencil
+    isShow: 0
+    memberType: 16
   - propName: npotSupport
     displayName: Npot Support
     isShow: 0
     memberType: 16
   - propName: maxTextureSize
     displayName: Max Texture Size
+    isShow: 0
+    memberType: 16
+  - propName: maxTexture3DSize
+    displayName: Max Texture 3D Size
+    isShow: 0
+    memberType: 16
+  - propName: maxTextureArraySlices
+    displayName: Max Texture Array Slices
     isShow: 0
     memberType: 16
   - propName: maxCubemapSize
@@ -1264,16 +952,24 @@ MonoBehaviour:
     displayName: Max Compute Work Group Size Z
     isShow: 0
     memberType: 16
+  - propName: computeSubGroupSize
+    displayName: Compute Sub Group Size
+    isShow: 0
+    memberType: 16
   - propName: supportsAsyncCompute
     displayName: Supports Async Compute
-    isShow: 1
+    isShow: 0
+    memberType: 16
+  - propName: supportsGpuRecorder
+    displayName: Supports Gpu Recorder
+    isShow: 0
     memberType: 16
   - propName: supportsGraphicsFence
     displayName: Supports Graphics Fence
     isShow: 0
     memberType: 16
   - propName: supportsAsyncGPUReadback
-    displayName: Supports Async G P U Readback
+    displayName: Supports Async GPU Readback
     isShow: 0
     memberType: 16
   - propName: supportsRayTracing
@@ -1282,6 +978,14 @@ MonoBehaviour:
     memberType: 16
   - propName: supportsSetConstantBuffer
     displayName: Supports Set Constant Buffer
+    isShow: 0
+    memberType: 16
+  - propName: constantBufferOffsetAlignment
+    displayName: Constant Buffer Offset Alignment
+    isShow: 0
+    memberType: 16
+  - propName: maxGraphicsBufferSize
+    displayName: Max Graphics Buffer Size
     isShow: 0
     memberType: 16
   - propName: minConstantBufferOffsetAlignment
@@ -1296,36 +1000,36 @@ MonoBehaviour:
     displayName: Supports Mip Streaming
     isShow: 0
     memberType: 16
-  - propName: usesLoadStoreActions
-    displayName: Uses Load Store Actions
-    isShow: 0
-    memberType: 16
-  - propName: supportsRenderTextures
-    displayName: Supports Render Textures
-    isShow: 0
-    memberType: 16
-  - propName: supportsRenderToCubemap
-    displayName: Supports Render To Cubemap
-    isShow: 0
-    memberType: 16
-  - propName: supportsImageEffects
-    displayName: Supports Image Effects
-    isShow: 0
-    memberType: 16
-  - propName: supportsStencil
-    displayName: Supports Stencil
-    isShow: 0
-    memberType: 16
   - propName: graphicsPixelFillrate
     displayName: Graphics Pixel Fillrate
     isShow: 0
     memberType: 16
-  - propName: supportsVertexPrograms
-    displayName: Supports Vertex Programs
+  - propName: usesLoadStoreActions
+    displayName: Uses Load Store Actions
     isShow: 0
     memberType: 16
-  - propName: supportsGPUFence
-    displayName: Supports G P U Fence
+  - propName: hdrDisplaySupportFlags
+    displayName: Hdr Display Support Flags
+    isShow: 0
+    memberType: 16
+  - propName: supportsConservativeRaster
+    displayName: Supports Conservative Raster
+    isShow: 0
+    memberType: 16
+  - propName: supportsMultiview
+    displayName: Supports Multiview
+    isShow: 0
+    memberType: 16
+  - propName: supportsStoreAndResolveAction
+    displayName: Supports Store And Resolve Action
+    isShow: 0
+    memberType: 16
+  - propName: supportsMultisampleResolveDepth
+    displayName: Supports Multisample Resolve Depth
+    isShow: 0
+    memberType: 16
+  - propName: supportsVertexPrograms
+    displayName: Supports Vertex Programs
     isShow: 0
     memberType: 16
   - propName: unsupportedIdentifier
@@ -1346,7 +1050,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!4 &1444841071
 Transform:
   m_ObjectHideFlags: 0
@@ -1433,37 +1137,102 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- Operating System: Mac OS X 12.6.3
+  m_Text: '- Supports GPU Fence: False
 
-    - Processor Type: Apple M1 Max
+    - Battery Level: 1
+
+    - Battery Status:
+    Full
+
+    - Operating System: Mac OS X 12.6.3
+
+    - Processor Count: 10
 
     -
-    Device Model: MacBookPro18,4
+    System Memory Size: 65536
 
-    - Supports Audio: True
+    - Device Unique Identifier: EFDB2331-DEF0-5E9D-B23F-6DF907B16E41
 
-    - Graphics Device
-    Name: Apple M1 Max
-
-    - Supports Sparse Textures: True
-
-    - Supports Async
-    G P U Readback: True
+    -
+    Device Name: ibu-mbp2021
 
     - Device Model: MacBookPro18,4
 
-    - Graphics Memory
-    Size: 49152
+    - Supports
+    Accelerometer: False
+
+    - Supports Gyroscope: False
+
+    - Supports Location
+    Service: False
+
+    - Supports Vibration: False
+
+    - Graphics Memory Size:
+    49152
 
     - Graphics Device Name: Apple M1 Max
 
-    - Graphics U V Starts
-    At Top: True
+    - Graphics Device Vendor:
+    Apple
 
-    - Graphics Shader Level: 50
+    - Graphics Device ID: 0
 
-    - Supports Async Compute:
-    False
+    - Graphics Device Vendor ID: 0
+
+    -
+    Graphics Device Type: Metal
+
+    - Graphics UV Starts At Top: True
+
+    - Graphics
+    Device Version: Metal
+
+    - Supports Render To Cubemap: True
+
+    - Supports
+    Image Effects: True
+
+    - Supports 3D Textures: True
+
+    - Supports Compressed
+    3D Textures: True
+
+    - Supports 2D Array Textures: True
+
+    - Supports 3D
+    Render Textures: True
+
+    - Supports Cubemap Array Textures: True
+
+    - Copy
+    Texture Support: Basic, Copy3D, DifferentTypes, TextureToRT, RTToTexture
+
+    -
+    Supports Compute Shaders: True
+
+    - Supports Geometry Shaders: False
+
+    -
+    Supports Tessellation Shaders: True
+
+    - Supports Render Target Array Index
+    From Vertex Shader: True
+
+    - Supports Instancing: True
+
+    - Supports Hardware
+    Quad Topology: False
+
+    - Supports 32bits Index Buffer: True
+
+    - Supports
+    Sparse Textures: True
+
+    - Supported Render Target Count: 8
+
+    - Supports
+    Separated Render Targets Blend: True
 
 '
 --- !u!222 &1640851635
