@@ -35,36 +35,37 @@ public sealed class SystemInfoViewEditor : Editor
         var hideProps = props.Where(p => !p.isShow);
 
         // Undo check
-        bool isPropChanged = false;
-
-        // Show
-        foldoutShowProps = EditorGUILayout.BeginFoldoutHeaderGroup(foldoutShowProps, "Show Props");
-        if (foldoutShowProps)
+        using (var check = new EditorGUI.ChangeCheckScope())
         {
-            foreach (var prop in showProps)
+            // Show
+            foldoutShowProps = EditorGUILayout.BeginFoldoutHeaderGroup(foldoutShowProps, "Show Props");
+            if (foldoutShowProps)
             {
-                isPropChanged = isPropChanged | ShowProp(prop);
+                foreach (var prop in showProps)
+                {
+                    ShowProp(prop);
+                }
+            }
+            EditorGUILayout.EndFoldoutHeaderGroup();
+
+            // Hide
+            foldoutHideProps = EditorGUILayout.BeginFoldoutHeaderGroup(foldoutHideProps, "Hide Props");
+            if (foldoutHideProps)
+            {
+                foreach (var prop in hideProps)
+                {
+                    ShowProp(prop);
+                }
+            }
+            EditorGUILayout.EndFoldoutHeaderGroup();
+
+            if (check.changed)
+            {
+                UnityEngine.Debug.Log($"Changed Property Show/Hide");
+                Undo.RecordObject(target, "Changed Property Show/Hide");
+                _target.OnValidate();
             }
         }
-        EditorGUILayout.EndFoldoutHeaderGroup();
-
-        // Hide
-        foldoutHideProps = EditorGUILayout.BeginFoldoutHeaderGroup(foldoutHideProps, "Hide Props");
-        if (foldoutHideProps)
-        {
-            foreach (var prop in hideProps)
-            {
-                isPropChanged = isPropChanged | ShowProp(prop);
-            }
-        }
-        EditorGUILayout.EndFoldoutHeaderGroup();
-
-        if (isPropChanged)
-        {
-            Undo.RecordObject(target, "Changed Property Show/Hide");
-            _target.OnValidate();
-        }
-
         serializedObject.ApplyModifiedProperties();
     }
 
@@ -78,6 +79,6 @@ public sealed class SystemInfoViewEditor : Editor
         bool before = prop.isShow;
         bool after = EditorGUILayout.ToggleLeft(prop.displayName, prop.isShow);
         prop.isShow = after;
-        return before == after;
+        return before != after;
     }
 }

@@ -3,6 +3,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 /// <summary>
 /// Show selected list of SystemInfo values
@@ -90,8 +93,8 @@ public sealed class SystemInfoView : MonoBehaviour
     public void OnValidate()
     {
         if (props == null
-        || props.Length == 0
-        || props.Any(p => !p.IsValid))
+            || props.Length == 0
+            || props.Any(p => !p.IsValid))
         {
             RebuildProps();
             return;
@@ -111,29 +114,20 @@ public sealed class SystemInfoView : MonoBehaviour
         Debug.Log("Rebuild Props");
         props = typeof(SystemInfo)
             .GetMembers(BindingFlags.Public | BindingFlags.Static)
+            .Where(info => info.MemberType == MemberTypes.Field
+                || info.MemberType == MemberTypes.Property)
             .Select(info =>
             {
                 Debug.Log($"{info} MemberType: {info.MemberType}");
                 return new Prop()
                 {
                     propName = info.Name,
-                    displayName = PropToDisplayName(info.Name),
+                    displayName = ObjectNames.NicifyVariableName(info.Name),
                     isShow = false,
                     memberType = info.MemberType,
                 };
             }).ToArray();
     }
-
-    // TODO fix regex
-    private static readonly Regex CaseRegex = new Regex(@"(?<!^)(?=[A-Z])");
-    private static string PropToDisplayName(string propName)
-    {
-        string name = propName.Replace("get_", "");
-        name = char.ToUpper(name.First()) + name.Substring(1);
-        var words = CaseRegex.Split(name);
-        return string.Join(" ", words);
-    }
-
 #endif // UNITY_EDITOR
     #endregion // Editor Code
 
