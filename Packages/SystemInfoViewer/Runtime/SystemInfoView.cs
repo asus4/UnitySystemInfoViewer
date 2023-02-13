@@ -111,6 +111,8 @@ public sealed class SystemInfoView : MonoBehaviour
         Debug.Log("Rebuild Props");
         props = typeof(SystemInfo)
             .GetMembers(BindingFlags.Public | BindingFlags.Static)
+            .Where(info => info.MemberType == MemberTypes.Field
+                || info.MemberType == MemberTypes.Property)
             .Select(info =>
             {
                 Debug.Log($"{info} MemberType: {info.MemberType}");
@@ -128,8 +130,7 @@ public sealed class SystemInfoView : MonoBehaviour
     private static readonly Regex CaseRegex = new Regex(@"(?<!^)(?=[A-Z])");
     private static string PropToDisplayName(string propName)
     {
-        string name = propName.Replace("get_", "");
-        name = char.ToUpper(name.First()) + name.Substring(1);
+        string name = char.ToUpper(propName.First()) + propName.Substring(1);
         var words = CaseRegex.Split(name);
         return string.Join(" ", words);
     }
