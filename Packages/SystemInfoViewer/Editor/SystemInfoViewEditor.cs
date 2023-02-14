@@ -61,7 +61,6 @@ public sealed class SystemInfoViewEditor : Editor
 
             if (check.changed)
             {
-                UnityEngine.Debug.Log($"Changed Property Show/Hide");
                 Undo.RecordObject(target, "Changed Property Show/Hide");
                 _target.OnValidate();
             }

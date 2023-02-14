@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
@@ -45,17 +46,40 @@ public sealed class SystemInfoView : MonoBehaviour
                     return type.GetProperty(propName).GetValue(null);
                 case MemberTypes.Method:
                     var method = type.GetMethod(propName);
-                    if (method.GetParameters().Length == 0)
+                    var parameters = method.GetParameters();
+                    if (parameters.Length == 0)
                     {
                         return method.Invoke(null, new object[] { });
                     }
+                    else if (parameters.Length == 1 && parameters[0].ParameterType.IsEnum)
+                    {
+                        // Try to pass enum parameters if parameter count is 1
+                        var enums = GetEnumValues(parameters[0].ParameterType);
+                        var sb = new System.Text.StringBuilder();
+                        sb.AppendLine();
+                        foreach (var e in enums)
+                        {
+                            sb.AppendLine($"  - {e}: {method.Invoke(null, new object[] { e })}");
+                        }
+                        return sb.ToString();
+                    }
                     else
                     {
-                        return $"Method with Parameter is not supported";
+                        return $"Method with parameters is not supported";
                     }
+                default:
+                    return $"Not Valid: {memberType}";
             }
+        }
 
-            return $"Not Valid: {memberType}";
+        private static IEnumerable<Enum> GetEnumValues(Type enumType)
+        {
+            // Get enums without Obsolete
+            return Enum.GetValues(enumType).Cast<Enum>().Where(e =>
+            {
+                var info = e.GetType().GetField(e.ToString());
+                return !IsObsolete(info);
+            });
         }
     }
 
@@ -91,6 +115,11 @@ public sealed class SystemInfoView : MonoBehaviour
         GUIUtility.systemCopyBuffer = BuildInfo();
     }
 
+    private static bool IsObsolete(MemberInfo info)
+    {
+        return Attribute.IsDefined(info, typeof(ObsoleteAttribute));
+    }
+
     #region Editor Code
 #if UNITY_EDITOR
     public void OnValidate()
@@ -117,11 +146,38 @@ public sealed class SystemInfoView : MonoBehaviour
         Debug.Log("Rebuild Props");
         props = typeof(SystemInfo)
             .GetMembers(BindingFlags.Public | BindingFlags.Static)
-            .Where(info => info.MemberType == MemberTypes.Field
-                || info.MemberType == MemberTypes.Property)
+            .Where(info =>
+            {
+                // Filter out obsolete
+                if (IsObsolete(info))
+                {
+                    return false;
+                }
+                if (info.MemberType == MemberTypes.Field || info.MemberType == MemberTypes.Property)
+                {
+                    return true;
+                }
+                if (info.MemberType == MemberTypes.Method)
+                {
+                    // Filter out getters
+                    if (info.Name.StartsWith("get_"))
+                    {
+                        return false;
+                    }
+                    var parameters = (info as MethodInfo).GetParameters();
+                    if (parameters.Length == 0)
+                    {
+                        return true;
+                    }
+                    else if (parameters.Length == 1 && parameters[0].ParameterType.IsEnum)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            })
             .Select(info =>
             {
-                Debug.Log($"{info} MemberType: {info.MemberType}");
                 return new Prop()
                 {
                     propName = info.Name,
