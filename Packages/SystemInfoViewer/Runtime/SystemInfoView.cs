@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -87,6 +86,10 @@ public sealed class SystemInfoView : MonoBehaviour
         return sb.ToString();
     }
 
+    public void CopyToClipboard()
+    {
+        GUIUtility.systemCopyBuffer = BuildInfo();
+    }
 
     #region Editor Code
 #if UNITY_EDITOR
