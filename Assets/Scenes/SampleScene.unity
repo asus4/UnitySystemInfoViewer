@@ -185,6 +185,140 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
+--- !u!1 &121758909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 121758910}
+  - component: {fileID: 121758913}
+  - component: {fileID: 121758912}
+  - component: {fileID: 121758911}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &121758910
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121758909}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 745412638}
+  m_Father: {fileID: 316808540}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -20, y: -20}
+  m_SizeDelta: {x: 180, y: 50}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &121758911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121758909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 121758912}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1444841070}
+        m_TargetAssemblyTypeName: SystemInfoView, SystemInfoViewer
+        m_MethodName: CopyToClipboard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &121758912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121758909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &121758913
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121758909}
+  m_CullTransparentMesh: 1
 --- !u!1 &316808539
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +351,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1640851633}
+  - {fileID: 121758910}
   m_Father: {fileID: 1434874419}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -369,6 +504,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &745412637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745412638}
+  - component: {fileID: 745412640}
+  - component: {fileID: 745412639}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &745412638
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745412637}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 121758910}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &745412639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745412637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Copy to Clipboard
+--- !u!222 &745412640
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745412637}
+  m_CullTransparentMesh: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,17 +867,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   props:
-  - propName: supportsGPUFence
-    displayName: Supports GPU Fence
+  - propName: SupportsRenderTextureFormat
+    displayName: Supports Render Texture Format
     isShow: 1
-    memberType: 16
+    memberType: 8
+  - propName: SupportsBlendingOnRenderTextureFormat
+    displayName: Supports Blending On Render Texture Format
+    isShow: 0
+    memberType: 8
+  - propName: SupportsRandomWriteOnRenderTextureFormat
+    displayName: Supports Random Write On Render Texture Format
+    isShow: 0
+    memberType: 8
+  - propName: SupportsTextureFormat
+    displayName: Supports Texture Format
+    isShow: 0
+    memberType: 8
+  - propName: GetGraphicsFormat
+    displayName: Get Graphics Format
+    isShow: 0
+    memberType: 8
   - propName: batteryLevel
     displayName: Battery Level
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: batteryStatus
     displayName: Battery Status
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: operatingSystem
     displayName: Operating System
@@ -674,11 +905,11 @@ MonoBehaviour:
     memberType: 16
   - propName: processorType
     displayName: Processor Type
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: processorFrequency
     displayName: Processor Frequency
-    isShow: 0
+    isShow: 1
     memberType: 16
   - propName: processorCount
     displayName: Processor Count
@@ -690,31 +921,31 @@ MonoBehaviour:
     memberType: 16
   - propName: deviceUniqueIdentifier
     displayName: Device Unique Identifier
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: deviceName
     displayName: Device Name
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: deviceModel
     displayName: Device Model
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsAccelerometer
     displayName: Supports Accelerometer
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsGyroscope
     displayName: Supports Gyroscope
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsLocationService
     displayName: Supports Location Service
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsVibration
     displayName: Supports Vibration
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsAudio
     displayName: Supports Audio
@@ -726,35 +957,35 @@ MonoBehaviour:
     memberType: 16
   - propName: graphicsMemorySize
     displayName: Graphics Memory Size
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsDeviceName
     displayName: Graphics Device Name
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsDeviceVendor
     displayName: Graphics Device Vendor
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsDeviceID
     displayName: Graphics Device ID
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsDeviceVendorID
     displayName: Graphics Device Vendor ID
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsDeviceType
     displayName: Graphics Device Type
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsUVStartsAtTop
     displayName: Graphics UV Starts At Top
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsDeviceVersion
     displayName: Graphics Device Version
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: graphicsShaderLevel
     displayName: Graphics Shader Level
@@ -784,45 +1015,33 @@ MonoBehaviour:
     displayName: Supports Raw Shadow Depth Sampling
     isShow: 0
     memberType: 16
-  - propName: supportsRenderTextures
-    displayName: Supports Render Textures
-    isShow: 0
-    memberType: 16
   - propName: supportsMotionVectors
     displayName: Supports Motion Vectors
     isShow: 0
     memberType: 16
-  - propName: supportsRenderToCubemap
-    displayName: Supports Render To Cubemap
-    isShow: 1
-    memberType: 16
-  - propName: supportsImageEffects
-    displayName: Supports Image Effects
-    isShow: 1
-    memberType: 16
   - propName: supports3DTextures
     displayName: Supports 3D Textures
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsCompressed3DTextures
     displayName: Supports Compressed 3D Textures
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supports2DArrayTextures
     displayName: Supports 2D Array Textures
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supports3DRenderTextures
     displayName: Supports 3D Render Textures
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsCubemapArrayTextures
     displayName: Supports Cubemap Array Textures
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: copyTextureSupport
     displayName: Copy Texture Support
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsComputeShaders
     displayName: Supports Compute Shaders
@@ -838,7 +1057,7 @@ MonoBehaviour:
     memberType: 16
   - propName: supportsRenderTargetArrayIndexFromVertexShader
     displayName: Supports Render Target Array Index From Vertex Shader
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsInstancing
     displayName: Supports Instancing
@@ -846,11 +1065,11 @@ MonoBehaviour:
     memberType: 16
   - propName: supportsHardwareQuadTopology
     displayName: Supports Hardware Quad Topology
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supports32bitsIndexBuffer
     displayName: Supports 32bits Index Buffer
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsSparseTextures
     displayName: Supports Sparse Textures
@@ -858,7 +1077,7 @@ MonoBehaviour:
     memberType: 16
   - propName: supportedRenderTargetCount
     displayName: Supported Render Target Count
-    isShow: 1
+    isShow: 0
     memberType: 16
   - propName: supportsSeparatedRenderTargetsBlend
     displayName: Supports Separated Render Targets Blend
@@ -886,10 +1105,6 @@ MonoBehaviour:
     memberType: 16
   - propName: usesReversedZBuffer
     displayName: Uses Reversed Z Buffer
-    isShow: 0
-    memberType: 16
-  - propName: supportsStencil
-    displayName: Supports Stencil
     isShow: 0
     memberType: 16
   - propName: npotSupport
@@ -988,20 +1203,12 @@ MonoBehaviour:
     displayName: Max Graphics Buffer Size
     isShow: 0
     memberType: 16
-  - propName: minConstantBufferOffsetAlignment
-    displayName: Min Constant Buffer Offset Alignment
-    isShow: 0
-    memberType: 16
   - propName: hasMipMaxLevel
     displayName: Has Mip Max Level
     isShow: 0
     memberType: 16
   - propName: supportsMipStreaming
     displayName: Supports Mip Streaming
-    isShow: 0
-    memberType: 16
-  - propName: graphicsPixelFillrate
-    displayName: Graphics Pixel Fillrate
     isShow: 0
     memberType: 16
   - propName: usesLoadStoreActions
@@ -1026,10 +1233,6 @@ MonoBehaviour:
     memberType: 16
   - propName: supportsMultisampleResolveDepth
     displayName: Supports Multisample Resolve Depth
-    isShow: 0
-    memberType: 16
-  - propName: supportsVertexPrograms
-    displayName: Supports Vertex Programs
     isShow: 0
     memberType: 16
   - propName: unsupportedIdentifier
@@ -1137,104 +1340,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- Supports GPU Fence: False
-
-    - Battery Level: 1
-
-    - Battery Status:
-    Full
-
-    - Operating System: Mac OS X 12.6.3
-
-    - Processor Count: 10
-
-    -
-    System Memory Size: 65536
-
-    - Device Unique Identifier: EFDB2331-DEF0-5E9D-B23F-6DF907B16E41
-
-    -
-    Device Name: ibu-mbp2021
-
-    - Device Model: MacBookPro18,4
-
-    - Supports
-    Accelerometer: False
-
-    - Supports Gyroscope: False
-
-    - Supports Location
-    Service: False
-
-    - Supports Vibration: False
-
-    - Graphics Memory Size:
-    49152
-
-    - Graphics Device Name: Apple M1 Max
-
-    - Graphics Device Vendor:
-    Apple
-
-    - Graphics Device ID: 0
-
-    - Graphics Device Vendor ID: 0
-
-    -
-    Graphics Device Type: Metal
-
-    - Graphics UV Starts At Top: True
-
-    - Graphics
-    Device Version: Metal
-
-    - Supports Render To Cubemap: True
-
-    - Supports
-    Image Effects: True
-
-    - Supports 3D Textures: True
-
-    - Supports Compressed
-    3D Textures: True
-
-    - Supports 2D Array Textures: True
-
-    - Supports 3D
-    Render Textures: True
-
-    - Supports Cubemap Array Textures: True
-
-    - Copy
-    Texture Support: Basic, Copy3D, DifferentTypes, TextureToRT, RTToTexture
-
-    -
-    Supports Compute Shaders: True
-
-    - Supports Geometry Shaders: False
-
-    -
-    Supports Tessellation Shaders: True
-
-    - Supports Render Target Array Index
-    From Vertex Shader: True
-
-    - Supports Instancing: True
-
-    - Supports Hardware
-    Quad Topology: False
-
-    - Supports 32bits Index Buffer: True
-
-    - Supports
-    Sparse Textures: True
-
-    - Supported Render Target Count: 8
-
-    - Supports
-    Separated Render Targets Blend: True
-
-'
+  m_Text: "- Supports Render Texture Format: \n  - ARGB32: True\n  - Depth: True\n 
+    - ARGBHalf: True\n  - Shadowmap: True\n  - RGB565: True\n  - ARGB4444: True\n 
+    - ARGB1555: True\n  - Default: True\n  - ARGB2101010: True\n  - DefaultHDR: True\n 
+    - ARGB64: True\n  - ARGBFloat: True\n  - RGFloat: True\n  - RGHalf: True\n  -
+    RFloat: True\n  - RHalf: True\n  - R8: True\n  - ARGBInt: True\n  - RGInt: True\n 
+    - RInt: True\n  - BGRA32: True\n  - RGB111110Float: True\n  - RG32: True\n  -
+    RGBAUShort: True\n  - RG16: True\n  - BGRA10101010_XR: True\n  - BGR101010_XR:
+    True\n  - R16: True\n\n- Operating System: Mac OS X 12.6.3\n- Processor Type:
+    Apple M1 Max\n- Processor Frequency: 2400\n- Processor Count: 10\n- System Memory
+    Size: 65536\n- Supports Compute Shaders: True\n- Supports Geometry Shaders: False\n-
+    Supports Tessellation Shaders: True\n- Supports Instancing: True\n- Supports
+    Sparse Textures: True\n- Supports Separated Render Targets Blend: True\n"
 --- !u!222 &1640851635
 CanvasRenderer:
   m_ObjectHideFlags: 0
