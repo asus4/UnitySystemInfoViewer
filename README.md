@@ -9,7 +9,7 @@ A utility to list arbitrary properties in the [SystemInfo](https://docs.unity3d.
 1. Add the package to your project  
 `https://github.com/asus4/UnitySystemInfoViewer.git?path=Packages/SystemInfoViewer#v1.1.1`
 
-2. Put link.xml in the root of your project. and add the following code  
+2. Put `link.xml` in the root of your project and add the following code if your project uses code-stripping
 
 ```xml
 <linker>
@@ -19,3 +19,6 @@ A utility to list arbitrary properties in the [SystemInfo](https://docs.unity3d.
     </assembly>
 </linker>
 ```
+
+3. Attach the `SystemInfoView` component to your GameObject
+4. Select properties you want to test
